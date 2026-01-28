@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { GraduationCap, CheckCircle2, Send, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabaseClient";
 
 const InternForm = () => {
   const { toast } = useToast();
@@ -23,16 +24,44 @@ const InternForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Application Submitted!",
-      description: "We'll review your application and be in touch soon with matching opportunities.",
-    });
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+
+      if (!supabase) {
+        throw new Error("Supabase client not configured");
+      }
+
+      const { error } = await supabase.from("intern_applications").insert({
+        full_name: data.fullName,
+        email: data.email,
+        phone: data.phone || null,
+        area_of_interest: data.interest,
+        education_level: data.education || null,
+        cv_url: fileName || null,
+        motivation: data.motivation,
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      toast({
+        title: "Application Submitted!",
+        description: "We'll review your application and be in touch soon with matching opportunities.",
+      });
+    } catch (error) {
+      console.error("Intern form email failed", error);
+      setIsSubmitting(false);
+      toast({
+        title: "Something went wrong",
+        description: "We couldn't send your application. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   if (isSubmitted) {
@@ -122,7 +151,7 @@ const InternForm = () => {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="internPhone">Phone *</Label>
-                  <Input id="internPhone" name="phone" type="tel" required placeholder="+44 7123 456789" />
+                  <Input id="internPhone" name="phone" type="tel" required placeholder="+44 7343012410" />
                 </div>
               </div>
 

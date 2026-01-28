@@ -50,11 +50,17 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-background/70">
                 <Phone className="w-5 h-5" />
-                <span>+44 20 1234 5678</span>
+                <span>+44 7343012410</span>
               </div>
-              <div className="flex items-center gap-3 text-background/70">
-                <MapPin className="w-5 h-5" />
-                <span>London, United Kingdom</span>
+              <div className="flex items-start gap-3 text-background/70">
+                <MapPin className="w-5 h-5 mt-0.5" />
+                <span>
+                  Company number 16676029
+                  <br />
+                  Registered office address
+                  <br />
+                  128 City Road, London, United Kingdom, EC1V 2NX
+                </span>
               </div>
             </div>
           </div>

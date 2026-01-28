@@ -6,6 +6,7 @@ import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Building2, CheckCircle2, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { supabase } from "@/lib/supabaseClient";
 
 const BusinessForm = () => {
   const { toast } = useToast();
@@ -15,16 +16,48 @@ const BusinessForm = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    toast({
-      title: "Request Submitted!",
-      description: "We'll be in touch within 24 hours to discuss your intern requirements.",
-    });
+
+    try {
+      const formData = new FormData(e.currentTarget);
+      const data = Object.fromEntries(formData.entries());
+
+      if (!supabase) {
+        throw new Error("Supabase client not configured");
+      }
+
+      const { error } = await supabase.from("business_leads").insert({
+        company_name: data.companyName,
+        contact_name: data.contactName,
+        email: data.email,
+        phone: data.phone || null,
+        role_title: data.roleTitle,
+        department: data.department || null,
+        skills_required: data.skills || null,
+        duration: data.duration || null,
+        location: data.location || null,
+        start_date: data.startDate || null,
+        notes: data.notes || null,
+      });
+
+      if (error) {
+        throw error;
+      }
+
+      setIsSubmitting(false);
+      setIsSubmitted(true);
+      toast({
+        title: "Request Submitted!",
+        description: "We'll be in touch within 24 hours to discuss your intern requirements.",
+      });
+    } catch (error) {
+      console.error("Business form email failed", error);
+      setIsSubmitting(false);
+      toast({
+        title: "Something went wrong",
+        description: "We couldn't send your request. Please try again later.",
+        variant: "destructive",
+      });
+    }
   };
 
   if (isSubmitted) {
@@ -117,7 +150,7 @@ const BusinessForm = () => {
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone (Optional)</Label>
-                  <Input id="phone" name="phone" type="tel" placeholder="+44 7123 456789" />
+                  <Input id="phone" name="phone" type="tel" placeholder="+44 7343012410" />
                 </div>
               </div>
 

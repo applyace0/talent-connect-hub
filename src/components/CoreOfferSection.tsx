@@ -45,7 +45,7 @@ const CoreOfferSection = () => {
           {benefits.map((benefit, index) => (
             <div
               key={index}
-              className="card-elevated card-hover p-8 group"
+              className="glass-card card-hover p-8 group"
             >
               <div className="flex items-start gap-5">
                 <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center group-hover:bg-accent/20 transition-colors">
@@ -64,10 +64,10 @@ const CoreOfferSection = () => {
           ))}
         </div>
 
-        {/* Bottom Highlight */}
-        <div className="bg-secondary rounded-2xl p-8 md:p-12">
-          <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12">
-            <div className="flex-1">
+        {/* Bottom Highlight with imagery */}
+        <div className="glass-card mt-4 p-6 md:p-10">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            <div className="flex-1 space-y-3">
               <h3 className="text-2xl font-bold text-foreground mb-3">
                 No Advertising. No Application Management.
               </h3>
@@ -85,6 +85,23 @@ const CoreOfferSection = () => {
                   {role}
                 </span>
               ))}
+            </div>
+            <div className="w-full max-w-xs md:max-w-sm">
+              <div className="relative">
+                <img
+                  src="https://images.pexels.com/photos/1181528/pexels-photo-1181528.jpeg?auto=compress&cs=tinysrgb&w=900"
+                  alt="Team reviewing an intern's work"
+                  className="h-52 w-full rounded-2xl object-cover shadow-elevated"
+                />
+                <div className="absolute -bottom-4 -left-4 hidden sm:block rounded-2xl bg-sky-600 text-sky-50 px-4 py-3 shadow-accent">
+                  <p className="text-xs font-medium uppercase tracking-[0.18em]">
+                    REAL TEAMS
+                  </p>
+                  <p className="text-sm font-semibold">
+                    Interns embedded into live projects
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

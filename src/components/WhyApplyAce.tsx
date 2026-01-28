@@ -45,12 +45,12 @@ const WhyApplyAce = () => {
           </p>
         </div>
 
-        {/* Reasons Grid */}
+        {/* Reasons Grid with subtle colour */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {reasons.map((reason, index) => (
             <div
               key={index}
-              className="group text-center p-8 rounded-2xl bg-secondary/50 hover:bg-secondary transition-colors"
+              className="group text-center p-8 rounded-2xl border border-slate-200 bg-white/70 shadow-soft hover:border-accent/50 hover:bg-sky-50/80 transition-colors"
             >
               <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
                 <reason.icon className="w-7 h-7 text-accent" />

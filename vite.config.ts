@@ -18,4 +18,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
+  // Expose NEXT_PUBLIC_ prefixed variables to client (for compatibility)
+  envPrefix: ["VITE_", "NEXT_PUBLIC_"],
 }));
