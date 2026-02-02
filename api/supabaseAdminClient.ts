@@ -9,13 +9,14 @@ import { createClient } from "@supabase/supabase-js";
  */
 
 // Read from environment variables (process.env for server-side Node.js context)
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL as string | undefined;
+// Support both NEXT_PUBLIC_ and VITE_ prefixes for compatibility
+const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SUPABASE_URL) as string | undefined;
 const serviceRoleKey = process.env.SUPABASE_SERVICE_ROLE_KEY as string | undefined;
 
 if (!supabaseUrl || !serviceRoleKey) {
   // eslint-disable-next-line no-console
   console.warn(
-    "[Supabase Admin] NEXT_PUBLIC_SUPABASE_URL and/or SUPABASE_SERVICE_ROLE_KEY are not set. Admin APIs will fail."
+    "[Supabase Admin] SUPABASE_URL and/or SUPABASE_SERVICE_ROLE_KEY are not set. Admin APIs will fail."
   );
 }
 

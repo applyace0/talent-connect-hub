@@ -11,6 +11,8 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    // Proxy removed - Vercel handles API routes automatically
+    // For local dev with Vercel: use `vercel dev` to run serverless functions
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

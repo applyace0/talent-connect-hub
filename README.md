@@ -60,6 +60,19 @@ This project is built with:
 - shadcn-ui
 - Tailwind CSS
 
+## Admin Panel
+
+This project includes a comprehensive admin panel for managing business leads and intern applications.
+
+**Quick Start:**
+1. Run the database migration (see `migrations/add_seen_columns.sql`)
+2. Set up environment variables (see `ADMIN_SETUP.md`)
+3. Install server dependencies: `cd server && npm install`
+4. Start both servers: `npm run dev:all`
+5. Access admin panel at `http://localhost:8080/admin/login`
+
+For detailed setup instructions, see [ADMIN_SETUP.md](./ADMIN_SETUP.md).
+
 ## How can I deploy this project?
 
 Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.

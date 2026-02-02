@@ -135,29 +135,29 @@ const BusinessForm = () => {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="companyName">Company Name *</Label>
-                  <Input id="companyName" name="companyName" required placeholder="Acme Inc." />
+                  <Input id="companyName" name="companyName" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="contactName">Contact Name *</Label>
-                  <Input id="contactName" name="contactName" required placeholder="John Smith" />
+                  <Input id="contactName" name="contactName" required />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="email">Email *</Label>
-                  <Input id="email" name="email" type="email" required placeholder="john@company.com" />
+                  <Input id="email" name="email" type="email" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="phone">Phone (Optional)</Label>
-                  <Input id="phone" name="phone" type="tel" placeholder="+44 7343012410" />
+                  <Input id="phone" name="phone" type="tel" />
                 </div>
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="roleTitle">Role Title *</Label>
-                  <Input id="roleTitle" name="roleTitle" required placeholder="Marketing Intern" />
+                  <Input id="roleTitle" name="roleTitle" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="department">Department / Function *</Label>
@@ -181,7 +181,7 @@ const BusinessForm = () => {
 
               <div className="space-y-2">
                 <Label htmlFor="skills">Key Skills Required *</Label>
-                <Input id="skills" name="skills" required placeholder="e.g., Social media, Content writing, Analytics" />
+                <Input id="skills" name="skills" required />
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
@@ -224,7 +224,6 @@ const BusinessForm = () => {
                 <Textarea
                   id="notes"
                   name="notes"
-                  placeholder="Any specific requirements, tools the intern should know, or other details..."
                   rows={4}
                 />
               </div>

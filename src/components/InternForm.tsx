@@ -141,17 +141,17 @@ const InternForm = () => {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="fullName">Full Name *</Label>
-                <Input id="fullName" name="fullName" required placeholder="Alex Johnson" />
+                <Input id="fullName" name="fullName" required />
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <Label htmlFor="internEmail">Email *</Label>
-                  <Input id="internEmail" name="email" type="email" required placeholder="alex@email.com" />
+                  <Input id="internEmail" name="email" type="email" required />
                 </div>
                 <div className="space-y-2">
                   <Label htmlFor="internPhone">Phone *</Label>
-                  <Input id="internPhone" name="phone" type="tel" required placeholder="+44 7343012410" />
+                  <Input id="internPhone" name="phone" type="tel" required />
                 </div>
               </div>
 
@@ -220,7 +220,6 @@ const InternForm = () => {
                   id="motivation"
                   name="motivation"
                   required
-                  placeholder="Tell us about your career goals, what you hope to learn, and why you'd be a great intern..."
                   rows={4}
                 />
               </div>
