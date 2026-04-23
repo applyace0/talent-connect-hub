@@ -47,7 +47,7 @@ const BusinessForm = () => {
       setIsSubmitted(true);
       toast({
         title: "Request Submitted!",
-        description: "We'll be in touch within 24 hours to discuss your intern requirements.",
+        description: "We'll be in touch within 24 hours to confirm items, quantities, and delivery details.",
       });
     } catch (error) {
       console.error("Business form email failed", error);
@@ -93,21 +93,21 @@ const BusinessForm = () => {
           {/* Left Content */}
           <div>
             <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-              For Businesses
+              For Buyers
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Request Intern Talent
+              Request a Wholesale Quote
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Tell us about the role you need filled. We'll match you with pre-vetted candidates from our intern pool and have options ready within days.
+              Tell us what you want to source. We'll respond with options, pricing, MOQs, and lead times.
             </p>
 
             <div className="space-y-6">
               {[
                 "Quick response within 24 hours",
-                "Pre-vetted candidates matched to your needs",
-                "No obligation until you're satisfied",
-                "Ongoing support throughout placement"
+                "Clear options with specs and MOQs",
+                "No obligation until you approve the quote",
+                "Support for repeat orders"
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
@@ -123,7 +123,7 @@ const BusinessForm = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Trusted by Growing Companies</p>
-                  <p className="text-sm text-muted-foreground">SMEs, startups, and agencies across all industries</p>
+                  <p className="text-sm text-muted-foreground">Retailers, hospitality, and independent stores</p>
                 </div>
               </div>
             </div>
@@ -156,23 +156,19 @@ const BusinessForm = () => {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="roleTitle">Role Title *</Label>
+                  <Label htmlFor="roleTitle">Items / Category *</Label>
                   <Input id="roleTitle" name="roleTitle" required />
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="department">Department / Function *</Label>
+                  <Label htmlFor="department">Category *</Label>
                   <Select name="department" required>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select department" />
+                      <SelectValue placeholder="Select category" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="marketing">Marketing</SelectItem>
-                      <SelectItem value="sales">Sales</SelectItem>
-                      <SelectItem value="engineering">Engineering</SelectItem>
-                      <SelectItem value="design">Design</SelectItem>
-                      <SelectItem value="operations">Operations</SelectItem>
-                      <SelectItem value="finance">Finance</SelectItem>
-                      <SelectItem value="hr">Human Resources</SelectItem>
+                      <SelectItem value="furniture">Furniture</SelectItem>
+                      <SelectItem value="confectionary">Confectionary</SelectItem>
+                      <SelectItem value="mixed">Mixed</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -180,42 +176,42 @@ const BusinessForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="skills">Key Skills Required *</Label>
+                <Label htmlFor="skills">Specifications / Notes *</Label>
                 <Input id="skills" name="skills" required />
               </div>
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="duration">Internship Duration *</Label>
+                  <Label htmlFor="duration">Order Size *</Label>
                   <Select name="duration" required>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select duration" />
+                      <SelectValue placeholder="Select order size" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="1-3months">1-3 months</SelectItem>
-                      <SelectItem value="3-6months">3-6 months</SelectItem>
-                      <SelectItem value="6-12months">6-12 months</SelectItem>
-                      <SelectItem value="12+months">12+ months</SelectItem>
+                      <SelectItem value="sample">Samples / small test</SelectItem>
+                      <SelectItem value="small">Small bulk</SelectItem>
+                      <SelectItem value="medium">Medium bulk</SelectItem>
+                      <SelectItem value="large">Large bulk / recurring</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="location">Location / Remote *</Label>
+                  <Label htmlFor="location">Delivery Type *</Label>
                   <Select name="location" required>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select work type" />
+                      <SelectValue placeholder="Select delivery type" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="onsite">On-site</SelectItem>
-                      <SelectItem value="remote">Fully Remote</SelectItem>
-                      <SelectItem value="hybrid">Hybrid</SelectItem>
+                      <SelectItem value="delivery">Delivery</SelectItem>
+                      <SelectItem value="pickup">Collection / Pickup</SelectItem>
+                      <SelectItem value="flexible">Flexible</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="startDate">Preferred Start Date</Label>
+                <Label htmlFor="startDate">Preferred Delivery Date</Label>
                 <Input id="startDate" name="startDate" type="date" />
               </div>
 
@@ -239,7 +235,7 @@ const BusinessForm = () => {
                   "Submitting..."
                 ) : (
                   <>
-                    Submit Intern Requirements
+                    Submit Quote Request
                     <Send className="w-5 h-5" />
                   </>
                 )}

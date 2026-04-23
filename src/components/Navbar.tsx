@@ -6,10 +6,10 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { href: "#placements", label: "Intern Placements" },
+    { href: "#placements", label: "Wholesale Range" },
     { href: "#how-it-works", label: "How It Works" },
-    { href: "#pricing", label: "Fees" },
-    { href: "#training", label: "Training" },
+    { href: "#pricing", label: "Pricing" },
+    { href: "#training", label: "Logistics" },
     { href: "#testimonials", label: "Testimonials" },
   ];
 
@@ -32,10 +32,10 @@ const Navbar = () => {
             </div>
             <div className="flex flex-col">
               <span className="text-xs font-medium uppercase tracking-[0.22em] text-slate-500">
-                APPLYACE
+                WHOLESALE
               </span>
               <span className="text-sm md:text-base font-semibold tracking-tight text-slate-900">
-                Talent Connect
+                Furniture & Confectionary
               </span>
             </div>
           </a>
@@ -63,7 +63,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("#apply")}
               className="text-xs font-medium text-slate-600 hover:text-slate-900"
             >
-              Apply as intern
+              Become a supplier
             </Button>
             <Button
               variant="accent"
@@ -71,7 +71,7 @@ const Navbar = () => {
               onClick={() => scrollToSection("#request")}
               className="text-xs font-semibold px-4"
             >
-              Request interns
+              Request a quote
             </Button>
           </div>
 
@@ -105,7 +105,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection("#apply")}
                   className="w-full"
                 >
-                  Apply as intern
+                  Become a supplier
                 </Button>
                 <Button
                   variant="accent"
@@ -113,7 +113,7 @@ const Navbar = () => {
                   onClick={() => scrollToSection("#request")}
                   className="w-full"
                 >
-                  Request interns
+                  Request a quote
                 </Button>
               </div>
             </div>

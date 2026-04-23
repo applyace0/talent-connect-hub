@@ -12,23 +12,23 @@ const TrainingSection = () => {
   const trainingFeatures = [
     {
       icon: Target,
-      title: "Role-Specific",
-      description: "Training designed around your exact job requirements and expectations."
+      title: "Order-Specific",
+      description: "Guidance designed around your exact product specs, packaging, and delivery requirements."
     },
     {
       icon: Settings,
-      title: "Tools & Systems",
-      description: "Interns learn your specific software, processes, and workflows."
+      title: "Packaging & Labeling",
+      description: "Clear requirements for carton labeling, palletization, and basic compliance."
     },
     {
       icon: Calendar,
       title: "Flexible Timing",
-      description: "Training delivered before or during the placement, as needed."
+      description: "We align timelines to lead times, dispatch windows, and delivery slots."
     },
     {
       icon: GraduationCap,
-      title: "Ready on Day One",
-      description: "Interns arrive prepared to contribute immediately."
+      title: "Ready to Ship",
+      description: "Orders are prepared for dispatch with agreed specs and documentation."
     }
   ];
 
@@ -42,10 +42,10 @@ const TrainingSection = () => {
               Optional Add-On
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Job-Ready Preparation & Training
+              Logistics & Order Support
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              For businesses that require interns to hit the ground running, we offer optional, tailored training solutions. Your interns arrive prepared for your specific tools, systems, and role requirements.
+              For buyers that want extra confidence, we offer optional support around packaging, labeling, and delivery coordination. Everything is aligned to your order requirements.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -67,7 +67,7 @@ const TrainingSection = () => {
               size="lg"
               onClick={() => scrollToSection("#request")}
             >
-              Ask About Trained Interns
+              Ask About Delivery Support
             </Button>
           </div>
 
@@ -79,13 +79,13 @@ const TrainingSection = () => {
                   <GraduationCap className="w-10 h-10 text-accent" />
                 </div>
                 <h3 className="text-2xl font-bold text-foreground mb-4">
-                  Training Is Optional
+                  Support Is Optional
                 </h3>
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Not every placement needs pre-training. Our standard intern placements are already vetted for skills and motivation. Training is available when you need that extra level of preparation.
+                  Not every order needs extra coordination. Standard wholesale quotes already cover the essentials; additional support is available when you need it.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2">
-                  {["CRM Systems", "Design Tools", "Analytics", "Communication"].map((tag) => (
+                  {["Palletization", "Labeling", "Delivery slots", "Documentation"].map((tag) => (
                     <span
                       key={tag}
                       className="px-3 py-1 rounded-full bg-secondary text-sm font-medium text-secondary-foreground"

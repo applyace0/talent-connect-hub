@@ -6,25 +6,25 @@ const HowItWorksSection = () => {
       number: "01",
       icon: FileText,
       title: "Tell Us Your Needs",
-      description: "Share the intern role you need filled — skills, duration, and any specific requirements."
+      description: "Share what you need — furniture, confectionary, volumes, delivery location, and timing."
     },
     {
       number: "02",
       icon: Search,
-      title: "We Match Candidates",
-      description: "We search our pre-vetted intern pool and identify the best-fit candidates for your role."
+      title: "We Source Options",
+      description: "We prepare a short list of suitable products with specs, MOQs, lead times, and pricing."
     },
     {
       number: "03",
       icon: UserCheck,
       title: "You Approve",
-      description: "Review candidate profiles, conduct interviews if you wish, and approve your chosen intern."
+      description: "Review the options, confirm quantities, and approve the quote that fits your needs."
     },
     {
       number: "04",
       icon: Rocket,
-      title: "Intern Starts",
-      description: "Your new intern joins your team, ready to contribute. We provide ongoing support."
+      title: "We Deliver",
+      description: "We coordinate dispatch and delivery. Ongoing support is available for repeat orders."
     }
   ];
 
@@ -40,7 +40,7 @@ const HowItWorksSection = () => {
             How It Works
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            From requirement to placement in four simple steps. We've streamlined the process so you can focus on what matters most.
+            From request to delivery in four simple steps. We've streamlined wholesale ordering so you can focus on your business.
           </p>
         </div>
 

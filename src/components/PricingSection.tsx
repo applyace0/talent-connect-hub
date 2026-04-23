@@ -10,12 +10,12 @@ const PricingSection = () => {
   };
 
   const features = [
-    "Access to our curated intern talent pool",
-    "Thorough candidate screening and vetting",
-    "Skills and culture-fit assessment",
-    "Candidate profile presentation",
-    "Interview coordination support",
-    "Ongoing placement support"
+    "Wholesale pricing and clear MOQs",
+    "Product specs and availability checks",
+    "Samples / test order guidance where possible",
+    "Options comparison and quote preparation",
+    "Delivery coordination support",
+    "Ongoing support for repeat orders"
   ];
 
   return (
@@ -27,10 +27,10 @@ const PricingSection = () => {
             Transparent Pricing
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Fees & Commercial Model
+            Pricing & Commercial Model
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Simple, fair pricing with no hidden costs. We succeed when you find the right intern for your team.
+            Simple, fair wholesale terms with no hidden costs. We succeed when your orders arrive on time and as expected.
           </p>
         </div>
 
@@ -44,10 +44,10 @@ const PricingSection = () => {
                 Primary Fee
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                Placement Fee
+                Order Pricing
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                A one-time fee applies when an intern is successfully matched and begins their placement with your business.
+                Pricing is based on the products, quantities (MOQ), and delivery requirements agreed in your quote.
               </p>
               <ul className="space-y-3">
                 {features.slice(0, 3).map((feature, index) => (
@@ -68,10 +68,10 @@ const PricingSection = () => {
                 Optional
               </div>
               <h3 className="text-2xl font-bold text-foreground mb-3">
-                Hiring Fee
+                Delivery & Handling
               </h3>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                If you choose to permanently hire an intern after their placement, a separate hiring fee applies. There's no obligation to hire.
+                Depending on your order, delivery and handling may be quoted separately. We’ll confirm everything upfront.
               </p>
               <ul className="space-y-3">
                 {features.slice(3).map((feature, index) => (
@@ -92,7 +92,7 @@ const PricingSection = () => {
             Pricing Discussed Upfront
           </h3>
           <p className="text-primary-foreground/80 max-w-2xl mx-auto mb-8 leading-relaxed">
-            We believe in complete transparency. All fees are discussed before any placement begins, so you always know exactly what to expect. No surprises, just straightforward partnership.
+            We believe in complete transparency. All pricing and delivery terms are discussed before you place an order, so you always know exactly what to expect. No surprises, just straightforward partnership.
           </p>
           <Button
             variant="hero"

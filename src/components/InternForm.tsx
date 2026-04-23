@@ -51,10 +51,10 @@ const InternForm = () => {
       setIsSubmitted(true);
       toast({
         title: "Application Submitted!",
-        description: "We'll review your application and be in touch soon with matching opportunities.",
+        description: "We'll review your details and be in touch soon about next steps.",
       });
     } catch (error) {
-      console.error("Intern form email failed", error);
+      console.error("Supplier form submission failed", error);
       setIsSubmitting(false);
       toast({
         title: "Something went wrong",
@@ -76,7 +76,7 @@ const InternForm = () => {
               Application Received!
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Thank you for applying to ApplyAce. We'll review your application and match you with suitable opportunities.
+              Thank you. We'll review your information and follow up with onboarding details if there's a fit.
             </p>
             <Button
               variant="outline"
@@ -100,21 +100,21 @@ const InternForm = () => {
           {/* Left Content */}
           <div>
             <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-              For Interns
+              For Suppliers
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Apply to ApplyAce
+              Become a Supplier
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Join our talent pool and get matched with exciting internship opportunities at growing businesses. We'll help you find the right placement for your skills and goals.
+              Share your catalog and capabilities. We'll reach out when we have buyer demand that matches your product range.
             </p>
 
             <div className="space-y-6 mb-12">
               {[
-                "Apply once, get matched to multiple opportunities",
-                "We advocate for you with potential employers",
-                "Support throughout your entire placement",
-                "Build real-world experience and skills"
+                "Simple onboarding and repeat orders",
+                "Clear requirements and order details",
+                "Support through dispatch and delivery",
+                "Long-term wholesale partnerships"
               ].map((item, index) => (
                 <div key={index} className="flex items-center gap-3">
                   <CheckCircle2 className="w-5 h-5 text-accent flex-shrink-0" />
@@ -130,7 +130,7 @@ const InternForm = () => {
                 </div>
                 <div>
                   <p className="font-semibold text-foreground">Start Your Career Journey</p>
-                  <p className="text-sm text-muted-foreground">500+ interns placed in real-world roles</p>
+                  <p className="text-sm text-muted-foreground">Build repeat wholesale demand with reliable buyers</p>
                 </div>
               </div>
             </div>
@@ -157,36 +157,30 @@ const InternForm = () => {
 
               <div className="grid sm:grid-cols-2 gap-4">
                 <div className="space-y-2">
-                  <Label htmlFor="interest">Area of Interest *</Label>
+                  <Label htmlFor="interest">Product Category *</Label>
                   <Select name="interest" required>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select area" />
+                      <SelectValue placeholder="Select category" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="marketing">Marketing</SelectItem>
-                      <SelectItem value="sales">Sales</SelectItem>
-                      <SelectItem value="engineering">Software Engineering</SelectItem>
-                      <SelectItem value="design">Design / UX</SelectItem>
-                      <SelectItem value="data">Data / Analytics</SelectItem>
-                      <SelectItem value="operations">Operations</SelectItem>
-                      <SelectItem value="finance">Finance</SelectItem>
-                      <SelectItem value="hr">Human Resources</SelectItem>
+                      <SelectItem value="furniture">Furniture</SelectItem>
+                      <SelectItem value="confectionary">Confectionary</SelectItem>
+                      <SelectItem value="mixed">Mixed</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
                 <div className="space-y-2">
-                  <Label htmlFor="education">Education Level *</Label>
+                  <Label htmlFor="education">Capacity / Lead Time *</Label>
                   <Select name="education" required>
                     <SelectTrigger>
-                      <SelectValue placeholder="Select level" />
+                      <SelectValue placeholder="Select option" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="highschool">High School</SelectItem>
-                      <SelectItem value="undergraduate">Undergraduate</SelectItem>
-                      <SelectItem value="graduate">Graduate</SelectItem>
-                      <SelectItem value="postgraduate">Postgraduate</SelectItem>
-                      <SelectItem value="bootcamp">Bootcamp / Certification</SelectItem>
+                      <SelectItem value="stock">In stock</SelectItem>
+                      <SelectItem value="1-2weeks">1–2 weeks</SelectItem>
+                      <SelectItem value="3-4weeks">3–4 weeks</SelectItem>
+                      <SelectItem value="6+weeks">6+ weeks</SelectItem>
                       <SelectItem value="other">Other</SelectItem>
                     </SelectContent>
                   </Select>
@@ -194,7 +188,7 @@ const InternForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="cv">Upload CV *</Label>
+                <Label htmlFor="cv">Upload catalog / spec sheet *</Label>
                 <div className="relative">
                   <input
                     id="cv"
@@ -215,7 +209,7 @@ const InternForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label htmlFor="motivation">Why do you want to intern? *</Label>
+                <Label htmlFor="motivation">Tell us about your products and terms *</Label>
                 <Textarea
                   id="motivation"
                   name="motivation"
@@ -235,7 +229,7 @@ const InternForm = () => {
                   "Submitting..."
                 ) : (
                   <>
-                    Apply as an Intern
+                    Register as a Supplier
                     <Send className="w-5 h-5" />
                   </>
                 )}

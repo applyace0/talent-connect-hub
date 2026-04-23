@@ -4,50 +4,50 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       type: "business",
-      quote: "ApplyAce saved us weeks of recruitment time. The intern they placed with us was pre-vetted, motivated, and hit the ground running. We've since used them for three more placements.",
+      quote: "They saved us weeks of sourcing time. The wholesale options were clear, pricing was straightforward, and delivery was handled smoothly. We've since reordered multiple times.",
       author: "Sarah Mitchell",
-      role: "Head of Marketing",
-      company: "TechFlow Agency",
+      role: "Procurement Manager",
+      company: "RetailCo",
       rating: 5
     },
     {
       type: "business",
-      quote: "We hired our intern permanently after just 4 months. The quality of candidates from ApplyAce was far better than posting job ads ourselves. Highly recommend.",
+      quote: "We trialed a small order first, then scaled to regular bulk purchases. Quality was consistent and communication was fast. Highly recommend.",
       author: "James Chen",
-      role: "Founder & CEO",
-      company: "Spark Digital",
+      role: "Owner",
+      company: "Chen Home & Goods",
       rating: 5
     },
     {
       type: "intern",
-      quote: "Applying to ApplyAce was the best decision I made. They matched me with a company that aligned perfectly with my goals, and I gained invaluable experience.",
+      quote: "As a supplier, it was easy to share our catalog and specs. The process was organized and helped us get repeat orders.",
       author: "Emma Rodriguez",
-      role: "Marketing Intern",
-      company: "Placed at BrightStart Media",
+      role: "Supplier Partner",
+      company: "Confectionary Manufacturer",
       rating: 5
     },
     {
       type: "business",
-      quote: "The optional training service was exactly what we needed. Our intern arrived already familiar with our tools and processes. Worth every penny.",
+      quote: "The delivery coordination support was exactly what we needed. Packaging and labeling requirements were handled properly. Worth it.",
       author: "Michael Torres",
       role: "Operations Director",
-      company: "ScaleUp Solutions",
+      company: "Warehouse & Distribution",
       rating: 5
     },
     {
       type: "intern",
-      quote: "Unlike other platforms where you apply endlessly, ApplyAce actively matched me with opportunities. I felt supported throughout my entire placement journey.",
+      quote: "Unlike marketplaces with endless back-and-forth, quotes were clear and we knew exactly what would be delivered. Support was solid throughout.",
       author: "David Park",
-      role: "Software Engineering Intern",
-      company: "Placed at Nexus Tech",
+      role: "Wholesale Buyer",
+      company: "Independent Retail",
       rating: 5
     },
     {
       type: "business",
-      quote: "As a small business without an HR team, we couldn't manage recruitment. ApplyAce handled everything and found us the perfect fit for our team.",
+      quote: "As a small business, we don’t have time to chase suppliers. They handled options, pricing, and delivery and made ordering simple.",
       author: "Lisa Thompson",
       role: "Managing Director",
-      company: "Creative Edge Studio",
+      company: "Thompson Interiors",
       rating: 5
     }
   ];
@@ -61,10 +61,10 @@ const TestimonialsSection = () => {
             Testimonials
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Trusted by Businesses & Interns
+            Trusted by Buyers & Suppliers
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Don't just take our word for it. Here's what our clients and placed interns have to say.
+            Don't just take our word for it. Here's what buyers and suppliers have to say.
           </p>
         </div>
 

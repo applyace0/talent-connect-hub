@@ -10,18 +10,18 @@ const Footer = () => {
 
   const footerLinks = {
     services: [
-      { label: "Intern Placements", href: "#placements" },
+      { label: "Wholesale Range", href: "#placements" },
       { label: "How It Works", href: "#how-it-works" },
-      { label: "Fees & Pricing", href: "#pricing" },
-      { label: "Optional Training", href: "#training" },
+      { label: "Pricing", href: "#pricing" },
+      { label: "Logistics Support", href: "#training" },
     ],
     getStarted: [
-      { label: "Request Interns", href: "#request" },
-      { label: "Apply as Intern", href: "#apply" },
+      { label: "Request a Quote", href: "#request" },
+      { label: "Become a Supplier", href: "#apply" },
       { label: "Testimonials", href: "#testimonials" },
     ],
     company: [
-      { label: "About ApplyAce", href: "#" },
+      { label: "About", href: "#" },
       { label: "Contact Us", href: "#" },
       { label: "Privacy Policy", href: "#" },
       { label: "Terms of Service", href: "#" },
@@ -38,10 +38,10 @@ const Footer = () => {
               <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-lg">A</span>
               </div>
-              <span className="font-bold text-xl">ApplyAce</span>
+              <span className="font-bold text-xl">Wholesale</span>
             </div>
             <p className="text-background/70 mb-6 leading-relaxed max-w-sm">
-              Intern Placement & Early Talent Solutions. We connect growing businesses with motivated, pre-vetted intern talent.
+              General wholesale of furniture and confectionary. Clear quotes, reliable supply, and delivery support for buyers and suppliers.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-background/70">
@@ -50,7 +50,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-background/70">
                 <Phone className="w-5 h-5" />
-                <span>+44 7343012410</span>
+                <span>07846651931</span>
               </div>
               <div className="flex items-start gap-3 text-background/70">
                 <MapPin className="w-5 h-5 mt-0.5" />
@@ -120,7 +120,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-background/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-background/50 text-sm">
-            © {new Date().getFullYear()} ApplyAce. All rights reserved.
+            © {new Date().getFullYear()} General Wholesale. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a

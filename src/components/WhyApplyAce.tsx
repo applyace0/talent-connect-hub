@@ -4,28 +4,28 @@ const WhyApplyAce = () => {
   const reasons = [
     {
       icon: Users,
-      title: "Intern-First Model",
-      description: "Our focus is on building genuine talent. Interns apply to us, ensuring motivated and engaged candidates."
+      title: "Wholesale-First Model",
+      description: "Our focus is on straightforward wholesale ordering—clear options, reliable supply, and repeatable terms."
     },
     {
       icon: ShieldCheck,
-      title: "Pre-Vetted Candidates",
-      description: "Every intern is thoroughly screened for skills, attitude, and reliability before placement."
+      title: "Reliable Supply",
+      description: "We prioritize consistency and clear specs so you can reorder without surprises."
     },
     {
       icon: Banknote,
-      title: "Transparent Fees",
-      description: "Simple, upfront pricing with no hidden costs. You always know exactly what you're paying for."
+      title: "Transparent Pricing",
+      description: "Upfront pricing and delivery terms. You always know what you’re paying for before ordering."
     },
     {
       icon: GraduationCap,
-      title: "Optional Training",
-      description: "Role-specific training available when you need interns prepared for your specific tools and workflows."
+      title: "Optional Logistics Support",
+      description: "Support available for packaging, labeling, and delivery coordination when you need it."
     },
     {
       icon: HeartHandshake,
       title: "Ongoing Support",
-      description: "We stay involved throughout the placement, supporting both businesses and interns for success."
+      description: "We stay involved through dispatch and beyond—supporting buyers and suppliers for smooth repeat orders."
     }
   ];
 
@@ -35,13 +35,13 @@ const WhyApplyAce = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
-            The ApplyAce Difference
+            The Difference
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Why Choose ApplyAce?
+            Why Choose Us?
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            We've built a better way to connect businesses with early-career talent. Here's what sets us apart.
+            We've built a better way to source furniture and confectionary at wholesale terms. Here's what sets us apart.
           </p>
         </div>
 

@@ -26,11 +26,11 @@ const FinalCTA = () => {
           </div>
 
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-6">
-            Find the Right Intern — Without the Recruitment Hassle
+            Wholesale Supply — Without the Sourcing Hassle
           </h2>
 
           <p className="text-lg text-primary-foreground/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            Whether you're a business looking for talent or a candidate seeking your first opportunity, ApplyAce makes it simple.
+            Whether you're a buyer sourcing stock or a supplier looking for repeat orders, we make it simple.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -39,7 +39,7 @@ const FinalCTA = () => {
               variant="hero"
               onClick={() => scrollToSection("#request")}
             >
-              Request Interns
+              Request a Quote
               <ArrowRight className="w-5 h-5" />
             </Button>
             <Button
@@ -47,7 +47,7 @@ const FinalCTA = () => {
               variant="hero-outline"
               onClick={() => scrollToSection("#apply")}
             >
-              Apply as an Intern
+              Become a Supplier
             </Button>
           </div>
         </div>

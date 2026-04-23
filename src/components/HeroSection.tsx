@@ -76,7 +76,7 @@ const HeroSection = () => {
                   <Crown className="h-4 w-4" />
                 </span>
                 <span className="text-xs font-medium uppercase tracking-[0.18em] text-muted-foreground">
-                  APPLYACE TALENT CONNECT
+                  GENERAL WHOLESALE
                 </span>
               </div>
             </div>
@@ -86,18 +86,16 @@ const HeroSection = () => {
                 className="text-4xl sm:text-5xl md:text-6xl font-semibold tracking-tight text-foreground text-balance animate-fade-up"
                 style={{ animationDelay: "0.05s" }}
               >
-                <span className="block gradient-text">
-                  Interns that feel
-                </span>
-                <span className="block">like part of your team.</span>
+                <span className="block gradient-text">General wholesale</span>
+                <span className="block">of furniture & confectionary.</span>
               </h1>
               <p
                 className="text-base md:text-lg text-muted-foreground max-w-xl leading-relaxed animate-fade-up"
                 style={{ animationDelay: "0.1s" }}
               >
-                ApplyAce connects you with pre-vetted, job‑ready interns trained
-                on modern tools, communication, and ownership—so you get impact
-                in weeks, not months.
+                Source reliable bulk supply for furniture and confectionary with
+                straightforward quotes, flexible MOQs, and delivery support—so you
+                can restock and fulfill orders with confidence.
               </p>
             </div>
 
@@ -113,7 +111,7 @@ const HeroSection = () => {
                   onClick={() => scrollToSection("#request")}
                   className="w-full sm:w-auto px-7 shadow-accent"
                 >
-                  Request interns
+                  Request a quote
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
                 <Button
@@ -122,14 +120,14 @@ const HeroSection = () => {
                   onClick={() => scrollToSection("#apply")}
                   className="w-full sm:w-auto px-7"
                 >
-                  Apply as an intern
+                  Become a supplier
                 </Button>
               </div>
               <div className="flex items-center gap-2 text-xs text-muted-foreground sm:pl-2">
                 <span className="inline-flex h-5 w-5 items-center justify-center rounded-full bg-emerald-100 text-emerald-600">
                   <Sparkles className="h-3 w-3" />
                 </span>
-                <span>3–6 week placements • Global‑ready communication</span>
+                <span>Furniture & confectionary • Wholesale-first terms</span>
               </div>
             </div>
 
@@ -140,7 +138,7 @@ const HeroSection = () => {
             >
               <div className="glass-card card-hover px-4 py-3">
                 <p className="text-xs font-medium text-muted-foreground">
-                  Interns placed
+                  Product lines
                 </p>
                 <p className="mt-1 text-xl font-semibold text-foreground">
                   <CountUp end={120} suffix="+" />
@@ -148,15 +146,15 @@ const HeroSection = () => {
               </div>
               <div className="glass-card card-hover px-4 py-3">
                 <p className="text-xs font-medium text-muted-foreground">
-                  Avg. ramp‑up time
+                  Quote turnaround
                 </p>
                 <p className="mt-1 text-xl font-semibold text-foreground">
-                  <CountUp end={10} /> days
+                  <CountUp end={24} /> hrs
                 </p>
               </div>
               <div className="glass-card card-hover px-4 py-3">
                 <p className="text-xs font-medium text-muted-foreground">
-                  Returning employers
+                  Returning buyers
                 </p>
                 <p className="mt-1 text-xl font-semibold text-foreground">
                   <CountUp end={87} suffix="%" />
@@ -180,7 +178,7 @@ const HeroSection = () => {
                     <span className="h-2.5 w-2.5 rounded-full bg-emerald-300" />
                   </div>
                   <span className="text-[11px] font-medium text-muted-foreground">
-                    Talent pipeline · Live
+                    Wholesale pipeline · Live
                   </span>
                 </div>
 
@@ -194,16 +192,16 @@ const HeroSection = () => {
                         </div>
                         <div>
                           <p className="text-xs font-medium text-muted-foreground">
-                            SaaS Startup · Product Intern
+                            Retail buyer · Mixed pallet
                           </p>
                           <p className="text-sm font-semibold text-foreground">
-                            3 candidates shortlisted
+                            3 options quoted
                           </p>
                         </div>
                       </div>
                       <div className="flex flex-col items-end">
                         <span className="text-[11px] font-medium text-emerald-600">
-                          Match quality · 92%
+                          Availability · 92%
                         </span>
                         <div className="mt-1 h-1.5 w-24 overflow-hidden rounded-full bg-slate-100">
                           <div className="h-full w-[92%] rounded-full bg-gradient-to-r from-sky-500 to-emerald-400" />
@@ -212,25 +210,25 @@ const HeroSection = () => {
                     </div>
                   </div>
 
-                  {/* row: intern readiness */}
+                  {/* row: inventory readiness */}
                   <div className="flex flex-col gap-3 rounded-2xl bg-white/75 p-3.5 shadow-soft">
                     <div className="flex items-center justify-between gap-3">
                       <div className="flex items-center gap-2">
                         <div className="h-8 w-8 rounded-full bg-gradient-to-br from-sky-500 to-blue-600 text-white flex items-center justify-center text-xs font-semibold">
-                          AA
+                          GW
                         </div>
                         <div>
                           <p className="text-xs font-semibold text-foreground">
-                            Cohort Q1 · Interns
+                            Weekly stock · Ready
                           </p>
                           <p className="text-[11px] text-muted-foreground">
-                            Trained on client communication, async work
+                            Palletized, labeled, dispatch-ready
                           </p>
                         </div>
                       </div>
                       <span className="inline-flex items-center rounded-full bg-emerald-50 px-2.5 py-1 text-[11px] font-medium text-emerald-700">
                         <span className="mr-1 h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                        Ready to deploy
+                        Ready to ship
                       </span>
                     </div>
 
@@ -239,19 +237,19 @@ const HeroSection = () => {
                         <p className="font-medium text-foreground text-xs">
                           40+
                         </p>
-                        <p>task projects</p>
+                        <p>SKUs tracked</p>
                       </div>
                       <div className="rounded-xl bg-slate-50 px-2.5 py-2">
                         <p className="font-medium text-foreground text-xs">
                           4.8/5
                         </p>
-                        <p>manager rating</p>
+                        <p>buyer rating</p>
                       </div>
                       <div className="rounded-xl bg-slate-50 px-2.5 py-2">
                         <p className="font-medium text-foreground text-xs">
-                          Global
+                          UK/EU
                         </p>
-                        <p>time‑zones</p>
+                        <p>delivery lanes</p>
                       </div>
                     </div>
                   </div>
@@ -264,15 +262,15 @@ const HeroSection = () => {
                       </div>
                       <div>
                         <p className="text-xs font-semibold text-foreground">
-                          Screening, compliance & support
+                          Packaging, compliance & support
                         </p>
                         <p className="text-[11px] text-muted-foreground">
-                          We handle interviews, documentation, and onboarding.
+                          We handle palletization, labeling, and dispatch support.
                         </p>
                       </div>
                     </div>
                     <span className="text-[11px] font-medium text-slate-500">
-                      Included for every placement
+                      Included for every order
                     </span>
                   </div>
                 </div>
