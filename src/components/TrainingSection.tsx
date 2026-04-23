@@ -1,5 +1,6 @@
 import { GraduationCap, Settings, Calendar, Target } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Reveal from "@/components/Reveal";
 
 const TrainingSection = () => {
   const scrollToSection = (href: string) => {
@@ -37,7 +38,8 @@ const TrainingSection = () => {
       <div className="section-container">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}
-          <div>
+          <Reveal>
+            <div>
             <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
               Optional Add-On
             </span>
@@ -69,10 +71,11 @@ const TrainingSection = () => {
             >
               Ask About Delivery Support
             </Button>
-          </div>
+            </div>
+          </Reveal>
 
           {/* Visual Card */}
-          <div className="relative">
+          <Reveal delay="120ms" className="relative">
             <div className="card-elevated p-8 md:p-10">
               <div className="text-center">
                 <div className="w-20 h-20 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6">
@@ -99,7 +102,7 @@ const TrainingSection = () => {
 
             {/* Decorative Elements */}
             <div className="absolute -z-10 -top-4 -right-4 w-full h-full rounded-2xl border-2 border-accent/20" />
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

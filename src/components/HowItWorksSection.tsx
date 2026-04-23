@@ -1,4 +1,5 @@
 import { FileText, Search, UserCheck, Rocket } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const HowItWorksSection = () => {
   const steps = [
@@ -32,7 +33,7 @@ const HowItWorksSection = () => {
     <section id="how-it-works" className="section-padding" style={{ background: "var(--gradient-subtle)" }}>
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
             Simple Process
           </span>
@@ -42,7 +43,7 @@ const HowItWorksSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             From request to delivery in four simple steps. We've streamlined wholesale ordering so you can focus on your business.
           </p>
-        </div>
+        </Reveal>
 
         {/* Steps */}
         <div className="relative">
@@ -51,30 +52,29 @@ const HowItWorksSection = () => {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {steps.map((step, index) => (
-              <div
-                key={index}
-                className="relative text-center group"
-              >
-                {/* Step Number Circle */}
-                <div className="relative mx-auto mb-6">
-                  <div className="w-16 h-16 rounded-full bg-background border-2 border-border flex items-center justify-center mx-auto relative z-10 group-hover:border-accent transition-colors">
-                    <step.icon className="w-7 h-7 text-accent" />
+              <Reveal key={index} delay={`${index * 90}ms`}>
+                <div className="relative text-center group">
+                  {/* Step Number Circle */}
+                  <div className="relative mx-auto mb-6">
+                    <div className="w-16 h-16 rounded-full bg-background border-2 border-border flex items-center justify-center mx-auto relative z-10 group-hover:border-accent transition-colors">
+                      <step.icon className="w-7 h-7 text-accent" />
+                    </div>
+                    <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm font-bold text-accent-foreground">
+                      {step.number.split("0")[1]}
+                    </span>
                   </div>
-                  <span className="absolute -top-2 -right-2 w-8 h-8 rounded-full bg-accent flex items-center justify-center text-sm font-bold text-accent-foreground">
-                    {step.number.split('0')[1]}
-                  </span>
-                </div>
 
-                {/* Content */}
-                <div className="card-elevated p-6 h-full">
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
-                    {step.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {step.description}
-                  </p>
+                  {/* Content */}
+                  <div className="card-elevated p-6 h-full">
+                    <h3 className="text-xl font-semibold text-foreground mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-              </div>
+              </Reveal>
             ))}
           </div>
         </div>

@@ -1,0 +1,49 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#060913"/>
+      <stop offset="0.55" stop-color="#0A1628"/>
+      <stop offset="1" stop-color="#060913"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 240) rotate(28) scale(820 620)">
+      <stop stop-color="#22D3EE" stop-opacity="0.18"/>
+      <stop offset="0.55" stop-color="#FACC15" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="tape" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#FDE68A" stop-opacity="0.85"/>
+      <stop offset="0.6" stop-color="#FACC15" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#spot)"/>
+
+  <g filter="url(#shadow)">
+    <!-- stacked cartons -->
+    <rect x="250" y="420" width="460" height="310" rx="38" fill="#0B1220" stroke="#E2E8F0" stroke-opacity="0.16"/>
+    <rect x="300" y="380" width="520" height="330" rx="38" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.18"/>
+    <rect x="860" y="420" width="490" height="310" rx="38" fill="#0B1220" stroke="#E2E8F0" stroke-opacity="0.16"/>
+
+    <!-- tape -->
+    <rect x="520" y="380" width="86" height="330" rx="18" fill="url(#tape)" opacity="0.9"/>
+    <rect x="1040" y="420" width="78" height="310" rx="16" fill="url(#tape)" opacity="0.8"/>
+
+    <!-- labels -->
+    <rect x="350" y="520" width="210" height="48" rx="14" fill="#F8FAFC" fill-opacity="0.10"/>
+    <rect x="920" y="520" width="220" height="48" rx="14" fill="#F8FAFC" fill-opacity="0.10"/>
+    <path d="M380 544H520" stroke="#E2E8F0" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
+    <path d="M950 544H1106" stroke="#E2E8F0" stroke-opacity="0.25" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <!-- corner marks -->
+  <g opacity="0.22">
+    <path d="M120 200H220V210H130V300H120V200Z" fill="#22D3EE"/>
+    <path d="M1480 780H1380V790H1470V900H1480V780Z" fill="#FACC15"/>
+  </g>
+</svg>
+

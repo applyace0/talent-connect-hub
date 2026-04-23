@@ -1,4 +1,5 @@
 import { Users, ShieldCheck, Banknote, GraduationCap, HeartHandshake } from "lucide-react";
+import Reveal from "@/components/Reveal";
 
 const WhyApplyAce = () => {
   const reasons = [
@@ -33,7 +34,7 @@ const WhyApplyAce = () => {
     <section className="section-padding bg-background">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
             The Difference
           </span>
@@ -43,25 +44,24 @@ const WhyApplyAce = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             We've built a better way to source furniture and confectionary at wholesale terms. Here's what sets us apart.
           </p>
-        </div>
+        </Reveal>
 
         {/* Reasons Grid with subtle colour */}
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="group text-center p-8 rounded-2xl border border-slate-200 bg-white/70 shadow-soft hover:border-accent/50 hover:bg-sky-50/80 transition-colors"
-            >
-              <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
-                <reason.icon className="w-7 h-7 text-accent" />
+            <Reveal key={index} delay={`${index * 80}ms`}>
+              <div className="group text-center p-8 rounded-2xl border border-slate-200 bg-white/70 shadow-soft hover:border-accent/50 hover:bg-amber-50/80 transition-colors">
+                <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-6 group-hover:bg-accent/20 transition-colors">
+                  <reason.icon className="w-7 h-7 text-accent" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">
+                  {reason.title}
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
-                {reason.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {reason.description}
-              </p>
-            </div>
+            </Reveal>
           ))}
         </div>
       </div>

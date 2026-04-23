@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex h-16 md:h-20 items-center justify-between gap-4">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2.5">
-            <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-sky-500 to-blue-600 text-white shadow-accent">
+            <div className="flex h-9 w-9 items-center justify-center rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500 text-white shadow-accent">
               <Crown className="h-4 w-4" />
             </div>
             <div className="flex flex-col">

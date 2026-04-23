@@ -8,6 +8,9 @@ import { GraduationCap, CheckCircle2, Send, Upload } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/lib/supabaseClient";
 
+const SUPPORT_EMAIL = "applyace0@gmail.com";
+const FORMS_API_URL = import.meta.env.VITE_FORMS_API_URL || "http://localhost:3001";
+
 const InternForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -47,6 +50,23 @@ const InternForm = () => {
         throw error;
       }
 
+      fetch(`${FORMS_API_URL}/api/forms/notify`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "Supplier registration",
+          payload: {
+            fullName: data.fullName,
+            email: data.email,
+            phone: data.phone || "",
+            productCategory: data.interest,
+            capacityOrLeadTime: data.education,
+            fileName: fileName || "",
+            details: data.motivation,
+          },
+        }),
+      }).catch((err) => console.warn("[InternForm] notify failed", err));
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       toast({
@@ -58,7 +78,7 @@ const InternForm = () => {
       setIsSubmitting(false);
       toast({
         title: "Something went wrong",
-        description: "We couldn't send your application. Please try again later.",
+        description: `We couldn't send your application. Please try again later or email us at ${SUPPORT_EMAIL}.`,
         variant: "destructive",
       });
     }
@@ -236,7 +256,13 @@ const InternForm = () => {
               </Button>
 
               <p className="text-xs text-center text-muted-foreground">
-                By applying, you agree to our Privacy Policy and Terms of Service.
+                Prefer email?{" "}
+                <a
+                  className="text-accent underline underline-offset-4 hover:opacity-90"
+                  href={`mailto:${SUPPORT_EMAIL}`}
+                >
+                  {SUPPORT_EMAIL}
+                </a>
               </p>
             </form>
           </div>

@@ -1,0 +1,59 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#05070D"/>
+      <stop offset="0.5" stop-color="#0A1222"/>
+      <stop offset="1" stop-color="#05070D"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1120 320) rotate(32) scale(760 560)">
+      <stop stop-color="#FACC15" stop-opacity="0.20"/>
+      <stop offset="0.55" stop-color="#22D3EE" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="box" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#0B1220"/>
+    </linearGradient>
+    <linearGradient id="foil" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#FDE68A" stop-opacity="0.85"/>
+      <stop offset="0.5" stop-color="#FBBF24" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0.8"/>
+    </linearGradient>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#spot)"/>
+
+  <g filter="url(#shadow)">
+    <!-- gift box -->
+    <rect x="260" y="330" width="520" height="420" rx="44" fill="url(#box)" stroke="#E2E8F0" stroke-opacity="0.14"/>
+    <rect x="260" y="330" width="520" height="66" rx="33" fill="#0F172A" opacity="0.85"/>
+    <rect x="304" y="360" width="432" height="10" rx="5" fill="url(#foil)"/>
+
+    <!-- cream box -->
+    <rect x="820" y="380" width="520" height="370" rx="44" fill="#F8FAFC" fill-opacity="0.92"/>
+    <rect x="820" y="380" width="520" height="370" rx="44" stroke="#E2E8F0" stroke-opacity="0.35"/>
+    <rect x="870" y="430" width="420" height="16" rx="8" fill="#0B1220" opacity="0.12"/>
+    <rect x="870" y="466" width="320" height="10" rx="5" fill="#0B1220" opacity="0.10"/>
+
+    <!-- chocolates -->
+    <g>
+      <rect x="912" y="642" width="120" height="68" rx="18" fill="#2B1B12"/>
+      <rect x="1052" y="622" width="140" height="88" rx="22" fill="#3A2418"/>
+      <rect x="1212" y="654" width="94" height="56" rx="16" fill="#24150E"/>
+      <path d="M1066 646C1098 626 1136 626 1168 646" stroke="#FDE68A" stroke-opacity="0.35" stroke-width="4" stroke-linecap="round"/>
+    </g>
+  </g>
+
+  <!-- subtle sparkle dots -->
+  <g opacity="0.35">
+    <circle cx="1320" cy="190" r="3.5" fill="#FDE68A"/>
+    <circle cx="1260" cy="240" r="2.5" fill="#22D3EE" opacity="0.8"/>
+    <circle cx="350" cy="220" r="2.8" fill="#E2E8F0" opacity="0.6"/>
+    <circle cx="470" cy="180" r="1.9" fill="#FACC15" opacity="0.7"/>
+  </g>
+</svg>
+

@@ -8,6 +8,9 @@ import { Building2, CheckCircle2, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/lib/supabaseClient";
 
+const SUPPORT_EMAIL = "applyace0@gmail.com";
+const FORMS_API_URL = import.meta.env.VITE_FORMS_API_URL || "http://localhost:3001";
+
 const BusinessForm = () => {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -43,6 +46,27 @@ const BusinessForm = () => {
         throw error;
       }
 
+      fetch(`${FORMS_API_URL}/api/forms/notify`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          kind: "Buyer quote request",
+          payload: {
+            companyName: data.companyName,
+            contactName: data.contactName,
+            email: data.email,
+            phone: data.phone || "",
+            itemsOrCategory: data.roleTitle,
+            category: data.department,
+            specifications: data.skills,
+            orderSize: data.duration,
+            deliveryType: data.location,
+            preferredDeliveryDate: data.startDate || "",
+            notes: data.notes || "",
+          },
+        }),
+      }).catch((err) => console.warn("[BusinessForm] notify failed", err));
+
       setIsSubmitting(false);
       setIsSubmitted(true);
       toast({
@@ -54,7 +78,7 @@ const BusinessForm = () => {
       setIsSubmitting(false);
       toast({
         title: "Something went wrong",
-        description: "We couldn't send your request. Please try again later.",
+        description: `We couldn't send your request. Please try again later or email us at ${SUPPORT_EMAIL}.`,
         variant: "destructive",
       });
     }
@@ -240,6 +264,16 @@ const BusinessForm = () => {
                   </>
                 )}
               </Button>
+
+              <p className="text-xs text-center text-muted-foreground">
+                Prefer email?{" "}
+                <a
+                  className="text-accent underline underline-offset-4 hover:opacity-90"
+                  href={`mailto:${SUPPORT_EMAIL}`}
+                >
+                  {SUPPORT_EMAIL}
+                </a>
+              </p>
             </form>
           </div>
         </div>

@@ -1,0 +1,60 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A10"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070A10"/>
+    </linearGradient>
+    <radialGradient id="spot" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 330) rotate(45) scale(760 560)">
+      <stop stop-color="#EAB308" stop-opacity="0.22"/>
+      <stop offset="0.6" stop-color="#22D3EE" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#C8A26F"/>
+      <stop offset="1" stop-color="#8A5A2B"/>
+    </linearGradient>
+    <filter id="soft" x="-40" y="-40" width="1680" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="14"/>
+    </filter>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#spot)"/>
+
+  <!-- subtle grid -->
+  <g opacity="0.18">
+    <path d="M0 220H1600" stroke="#E2E8F0" stroke-opacity="0.22"/>
+    <path d="M0 420H1600" stroke="#E2E8F0" stroke-opacity="0.16"/>
+    <path d="M0 620H1600" stroke="#E2E8F0" stroke-opacity="0.12"/>
+    <path d="M320 0V1000" stroke="#E2E8F0" stroke-opacity="0.10"/>
+    <path d="M640 0V1000" stroke="#E2E8F0" stroke-opacity="0.10"/>
+    <path d="M960 0V1000" stroke="#E2E8F0" stroke-opacity="0.10"/>
+    <path d="M1280 0V1000" stroke="#E2E8F0" stroke-opacity="0.10"/>
+  </g>
+
+  <!-- furniture shapes -->
+  <g filter="url(#shadow)">
+    <!-- table -->
+    <rect x="220" y="540" width="520" height="44" rx="22" fill="url(#wood)"/>
+    <rect x="268" y="584" width="28" height="210" rx="14" fill="#70451F"/>
+    <rect x="664" y="584" width="28" height="210" rx="14" fill="#70451F"/>
+    <rect x="310" y="592" width="340" height="10" rx="5" fill="#EAD7B9" opacity="0.35"/>
+
+    <!-- chair silhouette -->
+    <path d="M980 470C980 440 1004 416 1034 416H1126C1156 416 1180 440 1180 470V540H1146V478C1146 466 1136 456 1124 456H1036C1024 456 1014 466 1014 478V540H980V470Z" fill="#0F172A" opacity="0.9"/>
+    <rect x="1010" y="540" width="140" height="40" rx="18" fill="#0B1220" stroke="#E2E8F0" stroke-opacity="0.18"/>
+    <rect x="1018" y="580" width="22" height="230" rx="11" fill="#0B1220"/>
+    <rect x="1120" y="580" width="22" height="230" rx="11" fill="#0B1220"/>
+  </g>
+
+  <!-- micro highlights -->
+  <g filter="url(#soft)" opacity="0.55">
+    <circle cx="380" cy="300" r="120" fill="#FACC15" opacity="0.22"/>
+    <circle cx="1240" cy="240" r="140" fill="#22D3EE" opacity="0.12"/>
+  </g>
+</svg>
+

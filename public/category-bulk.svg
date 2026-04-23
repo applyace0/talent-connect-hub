@@ -1,0 +1,73 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070A12"/>
+    </linearGradient>
+    <radialGradient id="bokeh" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(800 290) rotate(24) scale(980 620)">
+      <stop stop-color="#22D3EE" stop-opacity="0.16"/>
+      <stop offset="0.55" stop-color="#FACC15" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur12" x="-40" y="-40" width="1680" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="badge" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.6" stop-color="#0EA5E9"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="badgeStroke" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2E8F0" stop-opacity="0.9"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="tape" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#FDE68A" stop-opacity="0.9"/>
+      <stop offset="0.55" stop-color="#FACC15" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#FDE68A" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bokeh)"/>
+
+  <!-- blurred "shipping lanes" -->
+  <g opacity="0.22" filter="url(#blur12)">
+    <rect x="110" y="260" width="1380" height="86" rx="20" fill="#22D3EE" opacity="0.28"/>
+    <rect x="110" y="372" width="1380" height="86" rx="20" fill="#94A3B8" opacity="0.35"/>
+    <rect x="110" y="484" width="1380" height="86" rx="20" fill="#FACC15" opacity="0.22"/>
+    <rect x="110" y="596" width="1380" height="86" rx="20" fill="#64748B" opacity="0.28"/>
+  </g>
+
+  <!-- badge -->
+  <g filter="url(#shadow)">
+    <path d="M420 210C420 166.922 454.922 132 498 132H1102C1145.08 132 1180 166.922 1180 210V238C1180 281.078 1145.08 316 1102 316H498C454.922 316 420 281.078 420 238V210Z" fill="url(#badge)"/>
+    <path d="M434 212C434 175.49 463.49 146 500 146H1100C1136.51 146 1166 175.49 1166 212V236C1166 272.51 1136.51 302 1100 302H500C463.49 302 434 272.51 434 236V212Z" stroke="url(#badgeStroke)" stroke-width="10" opacity="0.9"/>
+    <text x="800" y="256" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="88" font-weight="900" letter-spacing="3" fill="#F8FAFC" style="paint-order:stroke; stroke:#0B1220; stroke-width:10; stroke-linejoin:round;">
+      BULK READY
+    </text>
+  </g>
+
+  <!-- cartons -->
+  <g filter="url(#shadow)">
+    <path d="M140 820C360 790 520 780 800 780C1080 780 1240 790 1460 820L1500 1000H100L140 820Z" fill="#0B1220" opacity="0.92"/>
+    <rect x="250" y="540" width="500" height="330" rx="44" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.16" stroke-width="6"/>
+    <rect x="330" y="490" width="560" height="360" rx="44" fill="#111827" stroke="#E2E8F0" stroke-opacity="0.18" stroke-width="6"/>
+    <rect x="900" y="540" width="450" height="330" rx="44" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.16" stroke-width="6"/>
+
+    <!-- tape -->
+    <rect x="570" y="490" width="92" height="360" rx="22" fill="url(#tape)" opacity="0.95"/>
+    <rect x="1090" y="540" width="84" height="330" rx="20" fill="url(#tape)" opacity="0.85"/>
+
+    <!-- labels -->
+    <rect x="392" y="660" width="240" height="54" rx="16" fill="#F8FAFC" fill-opacity="0.10"/>
+    <rect x="980" y="660" width="250" height="54" rx="16" fill="#F8FAFC" fill-opacity="0.10"/>
+    <path d="M420 686H604" stroke="#E2E8F0" stroke-opacity="0.24" stroke-width="9" stroke-linecap="round"/>
+    <path d="M1010 686H1202" stroke="#E2E8F0" stroke-opacity="0.24" stroke-width="9" stroke-linecap="round"/>
+  </g>
+</svg>
+

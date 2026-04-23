@@ -1,0 +1,125 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070A12"/>
+    </linearGradient>
+    <radialGradient id="bokeh" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 290) rotate(24) scale(980 620)">
+      <stop stop-color="#F97316" stop-opacity="0.18"/>
+      <stop offset="0.35" stop-color="#FACC15" stop-opacity="0.12"/>
+      <stop offset="0.7" stop-color="#22D3EE" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur12" x="-40" y="-40" width="1680" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="badge" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF4D8D"/>
+      <stop offset="0.55" stop-color="#FF2D55"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="badgeStroke" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD1E1" stop-opacity="0.95"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="#FFE7B3" stop-opacity="0.85"/>
+    </linearGradient>
+    <linearGradient id="choc" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#3B2218"/>
+      <stop offset="1" stop-color="#1F120C"/>
+    </linearGradient>
+    <linearGradient id="candy" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#FDE68A"/>
+      <stop offset="0.35" stop-color="#FB7185"/>
+      <stop offset="0.7" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A7F3D0"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bokeh)"/>
+
+  <!-- "shelf" bokeh stripes -->
+  <g opacity="0.28" filter="url(#blur12)">
+    <rect x="80" y="260" width="1440" height="78" rx="22" fill="#F59E0B"/>
+    <rect x="80" y="360" width="1440" height="78" rx="22" fill="#EF4444" opacity="0.7"/>
+    <rect x="80" y="460" width="1440" height="78" rx="22" fill="#60A5FA" opacity="0.55"/>
+    <rect x="80" y="560" width="1440" height="78" rx="22" fill="#A78BFA" opacity="0.52"/>
+  </g>
+
+  <!-- badge -->
+  <g filter="url(#shadow)">
+    <path d="M420 210C420 166.922 454.922 132 498 132H1102C1145.08 132 1180 166.922 1180 210V238C1180 281.078 1145.08 316 1102 316H498C454.922 316 420 281.078 420 238V210Z" fill="url(#badge)"/>
+    <path d="M434 212C434 175.49 463.49 146 500 146H1100C1136.51 146 1166 175.49 1166 212V236C1166 272.51 1136.51 302 1100 302H500C463.49 302 434 272.51 434 236V212Z" stroke="url(#badgeStroke)" stroke-width="10" opacity="0.95"/>
+    <text x="800" y="256" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="84" font-weight="900" letter-spacing="2" fill="#FFF7F2" style="paint-order:stroke; stroke:#7C0A2A; stroke-width:10; stroke-linejoin:round;">
+      CONFECTIONERY
+    </text>
+  </g>
+
+  <!-- candy + chocolate pile -->
+  <g filter="url(#shadow)">
+    <!-- table surface -->
+    <path d="M140 820C360 790 520 780 800 780C1080 780 1240 790 1460 820L1500 1000H100L140 820Z" fill="#0B1220" opacity="0.92"/>
+    <path d="M210 842C420 812 560 804 800 804C1040 804 1180 812 1390 842" stroke="#E2E8F0" stroke-opacity="0.10" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- jar -->
+    <rect x="650" y="560" width="300" height="210" rx="34" fill="#0F172A" opacity="0.72" stroke="#E2E8F0" stroke-opacity="0.18" stroke-width="6"/>
+    <rect x="690" y="520" width="220" height="70" rx="26" fill="#0B1220" opacity="0.85" stroke="#E2E8F0" stroke-opacity="0.14" stroke-width="6"/>
+    <g opacity="0.9">
+      <circle cx="720" cy="640" r="16" fill="#FB7185"/>
+      <circle cx="760" cy="670" r="14" fill="#22D3EE"/>
+      <circle cx="808" cy="642" r="14" fill="#FACC15"/>
+      <circle cx="842" cy="688" r="16" fill="#A7F3D0"/>
+      <circle cx="900" cy="648" r="15" fill="#F59E0B"/>
+      <circle cx="878" cy="716" r="14" fill="#60A5FA"/>
+      <circle cx="734" cy="710" r="13" fill="#F472B6"/>
+      <circle cx="792" cy="708" r="12" fill="#34D399"/>
+    </g>
+
+    <!-- lollipops -->
+    <g>
+      <circle cx="400" cy="690" r="66" fill="#FB7185" opacity="0.95"/>
+      <path d="M400 642C426 652 442 680 432 706C420 736 380 744 360 718C342 694 362 658 400 642Z" fill="#FDE68A" opacity="0.85"/>
+      <path d="M400 642C372 652 356 680 366 706C378 736 418 744 438 718C456 694 436 658 400 642Z" fill="#22D3EE" opacity="0.55"/>
+      <path d="M398 754L344 846" stroke="#E2E8F0" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round"/>
+
+      <circle cx="1110" cy="690" r="62" fill="#22D3EE" opacity="0.9"/>
+      <path d="M1110 640C1134 650 1150 676 1142 702C1132 730 1096 740 1078 716C1060 694 1078 656 1110 640Z" fill="#FDE68A" opacity="0.8"/>
+      <path d="M1110 640C1090 650 1076 676 1084 702C1094 730 1128 740 1146 716C1162 694 1144 656 1110 640Z" fill="#FB7185" opacity="0.55"/>
+      <path d="M1110 750L1162 846" stroke="#E2E8F0" stroke-opacity="0.7" stroke-width="10" stroke-linecap="round"/>
+    </g>
+
+    <!-- marshmallows -->
+    <g>
+      <rect x="520" y="720" width="110" height="74" rx="26" fill="#F8FAFC" opacity="0.92"/>
+      <rect x="580" y="690" width="118" height="78" rx="28" fill="#F8FAFC" opacity="0.88"/>
+      <rect x="640" y="730" width="120" height="76" rx="28" fill="#F8FAFC" opacity="0.9"/>
+      <rect x="700" y="700" width="120" height="80" rx="28" fill="#F8FAFC" opacity="0.86"/>
+      <rect x="760" y="728" width="122" height="78" rx="28" fill="#F8FAFC" opacity="0.9"/>
+    </g>
+
+    <!-- chocolates -->
+    <g>
+      <rect x="1050" y="760" width="260" height="86" rx="26" fill="url(#choc)"/>
+      <rect x="990" y="740" width="220" height="78" rx="24" fill="#2B1B12"/>
+      <circle cx="980" cy="780" r="34" fill="#3A2418"/>
+      <circle cx="1020" cy="812" r="28" fill="#24150E"/>
+      <circle cx="1260" cy="748" r="30" fill="#3A2418"/>
+      <path d="M1080 790C1136 760 1190 760 1246 790" stroke="#FDE68A" stroke-opacity="0.35" stroke-width="6" stroke-linecap="round"/>
+    </g>
+
+    <!-- candy scatter -->
+    <g opacity="0.95">
+      <circle cx="310" cy="820" r="16" fill="url(#candy)"/>
+      <circle cx="350" cy="860" r="14" fill="#FB7185"/>
+      <circle cx="460" cy="830" r="12" fill="#22D3EE"/>
+      <circle cx="560" cy="858" r="12" fill="#FACC15"/>
+      <circle cx="920" cy="850" r="13" fill="#A7F3D0"/>
+      <circle cx="1180" cy="860" r="12" fill="#60A5FA"/>
+    </g>
+  </g>
+</svg>
+

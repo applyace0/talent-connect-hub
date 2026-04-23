@@ -1,0 +1,70 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070A12"/>
+    </linearGradient>
+    <radialGradient id="bokeh" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(980 290) rotate(24) scale(980 620)">
+      <stop stop-color="#FACC15" stop-opacity="0.16"/>
+      <stop offset="0.4" stop-color="#22D3EE" stop-opacity="0.10"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur12" x="-40" y="-40" width="1680" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="badge" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FACC15"/>
+      <stop offset="0.5" stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#22D3EE"/>
+    </linearGradient>
+    <linearGradient id="badgeStroke" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7DB" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.75"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bokeh)"/>
+
+  <!-- blurred "featured aisle" -->
+  <g opacity="0.24" filter="url(#blur12)">
+    <rect x="120" y="260" width="1360" height="92" rx="20" fill="#FACC15" opacity="0.25"/>
+    <rect x="120" y="372" width="1360" height="92" rx="20" fill="#FB7185" opacity="0.2"/>
+    <rect x="120" y="484" width="1360" height="92" rx="20" fill="#22D3EE" opacity="0.18"/>
+    <rect x="120" y="596" width="1360" height="92" rx="20" fill="#94A3B8" opacity="0.25"/>
+  </g>
+
+  <!-- badge -->
+  <g filter="url(#shadow)">
+    <path d="M420 210C420 166.922 454.922 132 498 132H1102C1145.08 132 1180 166.922 1180 210V238C1180 281.078 1145.08 316 1102 316H498C454.922 316 420 281.078 420 238V210Z" fill="url(#badge)"/>
+    <path d="M434 212C434 175.49 463.49 146 500 146H1100C1136.51 146 1166 175.49 1166 212V236C1166 272.51 1136.51 302 1100 302H500C463.49 302 434 272.51 434 236V212Z" stroke="url(#badgeStroke)" stroke-width="10" opacity="0.92"/>
+    <text x="800" y="256" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="88" font-weight="900" letter-spacing="3" fill="#FFF7F2" style="paint-order:stroke; stroke:#0B1220; stroke-width:10; stroke-linejoin:round;">
+      SEASONAL
+    </text>
+  </g>
+
+  <!-- "promo table" -->
+  <g filter="url(#shadow)">
+    <path d="M140 820C360 790 520 780 800 780C1080 780 1240 790 1460 820L1500 1000H100L140 820Z" fill="#0B1220" opacity="0.92"/>
+    <rect x="260" y="560" width="520" height="320" rx="44" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.16" stroke-width="6"/>
+    <rect x="860" y="520" width="520" height="360" rx="44" fill="#F8FAFC" fill-opacity="0.92" stroke="#E2E8F0" stroke-opacity="0.28" stroke-width="6"/>
+
+    <!-- tags -->
+    <rect x="320" y="610" width="180" height="56" rx="18" fill="#FACC15" fill-opacity="0.18"/>
+    <rect x="520" y="610" width="220" height="56" rx="18" fill="#22D3EE" fill-opacity="0.14"/>
+    <path d="M352 638H468" stroke="#FDE68A" stroke-opacity="0.6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M552 638H702" stroke="#E2E8F0" stroke-opacity="0.28" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- confetti -->
+    <g opacity="0.55">
+      <path d="M1110 600L1146 636" stroke="#FB7185" stroke-width="10" stroke-linecap="round"/>
+      <path d="M1200 600L1170 640" stroke="#22D3EE" stroke-width="10" stroke-linecap="round"/>
+      <path d="M1280 610L1310 638" stroke="#FACC15" stroke-width="10" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>
+

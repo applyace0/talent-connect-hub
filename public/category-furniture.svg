@@ -1,0 +1,77 @@
+<svg width="1600" height="1000" viewBox="0 0 1600 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="1000" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#070A12"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#070A12"/>
+    </linearGradient>
+    <radialGradient id="bokeh" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(520 290) rotate(24) scale(980 620)">
+      <stop stop-color="#FACC15" stop-opacity="0.14"/>
+      <stop offset="0.55" stop-color="#22D3EE" stop-opacity="0.08"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur12" x="-40" y="-40" width="1680" height="1080" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+    <filter id="shadow" x="-60" y="-60" width="1720" height="1120" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="26" stdDeviation="22" flood-color="#000000" flood-opacity="0.55"/>
+    </filter>
+    <linearGradient id="badge" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#FACC15"/>
+    </linearGradient>
+    <linearGradient id="badgeStroke" x1="420" y1="130" x2="1180" y2="310" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E2E8F0" stop-opacity="0.95"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.75"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#D2B48C"/>
+      <stop offset="1" stop-color="#8A5A2B"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="1000" rx="56" fill="url(#bg)"/>
+  <rect width="1600" height="1000" rx="56" fill="url(#bokeh)"/>
+
+  <!-- blurred "warehouse racks" -->
+  <g opacity="0.26" filter="url(#blur12)">
+    <rect x="120" y="250" width="1360" height="92" rx="22" fill="#94A3B8" opacity="0.55"/>
+    <rect x="120" y="366" width="1360" height="92" rx="22" fill="#64748B" opacity="0.45"/>
+    <rect x="120" y="482" width="1360" height="92" rx="22" fill="#475569" opacity="0.4"/>
+    <rect x="120" y="598" width="1360" height="92" rx="22" fill="#334155" opacity="0.38"/>
+  </g>
+
+  <!-- badge -->
+  <g filter="url(#shadow)">
+    <path d="M420 210C420 166.922 454.922 132 498 132H1102C1145.08 132 1180 166.922 1180 210V238C1180 281.078 1145.08 316 1102 316H498C454.922 316 420 281.078 420 238V210Z" fill="url(#badge)"/>
+    <path d="M434 212C434 175.49 463.49 146 500 146H1100C1136.51 146 1166 175.49 1166 212V236C1166 272.51 1136.51 302 1100 302H500C463.49 302 434 272.51 434 236V212Z" stroke="url(#badgeStroke)" stroke-width="10" opacity="0.9"/>
+    <text x="800" y="256" text-anchor="middle" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" font-size="90" font-weight="900" letter-spacing="4" fill="#F8FAFC" style="paint-order:stroke; stroke:#0B1220; stroke-width:10; stroke-linejoin:round;">
+      FURNITURE
+    </text>
+  </g>
+
+  <!-- furniture silhouettes -->
+  <g filter="url(#shadow)">
+    <!-- platform -->
+    <path d="M140 820C360 790 520 780 800 780C1080 780 1240 790 1460 820L1500 1000H100L140 820Z" fill="#0B1220" opacity="0.92"/>
+    <path d="M210 842C420 812 560 804 800 804C1040 804 1180 812 1390 842" stroke="#E2E8F0" stroke-opacity="0.10" stroke-width="10" stroke-linecap="round"/>
+
+    <!-- table -->
+    <rect x="260" y="620" width="560" height="48" rx="24" fill="url(#wood)"/>
+    <rect x="310" y="668" width="30" height="190" rx="15" fill="#70451F"/>
+    <rect x="740" y="668" width="30" height="190" rx="15" fill="#70451F"/>
+    <rect x="360" y="678" width="360" height="10" rx="5" fill="#F8FAFC" opacity="0.16"/>
+
+    <!-- chair -->
+    <path d="M980 520C980 476.922 1014.92 442 1058 442H1142C1185.08 442 1220 476.922 1220 520V580H1178V528C1178 512.536 1165.46 500 1150 500H1050C1034.54 500 1022 512.536 1022 528V580H980V520Z" fill="#0F172A" opacity="0.92"/>
+    <rect x="1018" y="580" width="164" height="44" rx="20" fill="#0B1220" stroke="#E2E8F0" stroke-opacity="0.16"/>
+    <rect x="1030" y="624" width="24" height="234" rx="12" fill="#0B1220"/>
+    <rect x="1146" y="624" width="24" height="234" rx="12" fill="#0B1220"/>
+
+    <!-- boxes -->
+    <rect x="860" y="710" width="150" height="120" rx="24" fill="#0F172A" stroke="#E2E8F0" stroke-opacity="0.14"/>
+    <rect x="900" y="680" width="170" height="140" rx="26" fill="#111827" stroke="#E2E8F0" stroke-opacity="0.16"/>
+  </g>
+</svg>
+

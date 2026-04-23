@@ -1,5 +1,6 @@
 import { CheckCircle2, HelpCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Reveal from "@/components/Reveal";
 
 const PricingSection = () => {
   const scrollToSection = (href: string) => {
@@ -22,7 +23,7 @@ const PricingSection = () => {
     <section id="pricing" className="section-padding bg-background">
       <div className="section-container">
         {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <Reveal className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-sm font-semibold text-accent uppercase tracking-wider mb-4">
             Transparent Pricing
           </span>
@@ -32,12 +33,13 @@ const PricingSection = () => {
           <p className="text-lg text-muted-foreground leading-relaxed">
             Simple, fair wholesale terms with no hidden costs. We succeed when your orders arrive on time and as expected.
           </p>
-        </div>
+        </Reveal>
 
         {/* Pricing Cards */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
           {/* Placement Fee Card */}
-          <div className="card-elevated p-8 relative overflow-hidden">
+          <Reveal>
+            <div className="card-elevated p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-accent/5 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="relative">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent/10 text-accent text-sm font-medium mb-4">
@@ -58,10 +60,12 @@ const PricingSection = () => {
                 ))}
               </ul>
             </div>
-          </div>
+            </div>
+          </Reveal>
 
           {/* Hiring Fee Card */}
-          <div className="card-elevated p-8 relative overflow-hidden">
+          <Reveal delay="90ms">
+            <div className="card-elevated p-8 relative overflow-hidden">
             <div className="absolute top-0 right-0 w-32 h-32 bg-highlight/5 rounded-full -translate-y-1/2 translate-x-1/2" />
             <div className="relative">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-highlight/10 text-highlight text-sm font-medium mb-4">
@@ -82,11 +86,13 @@ const PricingSection = () => {
                 ))}
               </ul>
             </div>
-          </div>
+            </div>
+          </Reveal>
         </div>
 
         {/* Trust Section */}
-        <div className="bg-primary rounded-2xl p-8 md:p-12 text-center">
+        <Reveal>
+          <div className="bg-primary rounded-2xl p-8 md:p-12 text-center">
           <HelpCircle className="w-12 h-12 text-accent mx-auto mb-6" />
           <h3 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
             Pricing Discussed Upfront
@@ -101,7 +107,8 @@ const PricingSection = () => {
           >
             Get a Quote
           </Button>
-        </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
