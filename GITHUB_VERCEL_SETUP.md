@@ -5,7 +5,7 @@
 - **GitHub Repository:** `applyace0/talent-connect-hub`
 - **GitHub URL:** https://github.com/applyace0/talent-connect-hub
 - **GitHub Account:** applyace0
-- **Email:** applyace0@gmail.com
+- **Email:** contactus@applyace.io
 
 ## Connecting GitHub to Vercel
 
@@ -95,7 +95,7 @@ To add a custom domain:
 ## GitHub Account Details
 
 - **GitHub Username:** applyace0
-- **GitHub Email:** applyace0@gmail.com
+- **GitHub Email:** contactus@applyace.io
 - **Repository:** applyace0/talent-connect-hub
 - **Repository Type:** Public
 
@@ -196,4 +196,4 @@ If you encounter issues:
 
 **Last Updated:** 2024
 **Repository:** https://github.com/applyace0/talent-connect-hub
-**Contact:** applyace0@gmail.com
+**Contact:** contactus@applyace.io

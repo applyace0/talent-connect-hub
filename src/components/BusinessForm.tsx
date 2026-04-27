@@ -8,7 +8,7 @@ import { Building2, CheckCircle2, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/lib/supabaseClient";
 
-const SUPPORT_EMAIL = "applyace0@gmail.com";
+const SUPPORT_EMAIL = "contactus@applyace.io";
 const FORMS_API_URL = import.meta.env.VITE_FORMS_API_URL || "http://localhost:3001";
 
 const BusinessForm = () => {

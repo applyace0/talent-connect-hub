@@ -19,7 +19,7 @@ const supabaseUrl = (process.env.NEXT_PUBLIC_SUPABASE_URL || process.env.VITE_SU
 const serviceRoleKey = (process.env.SUPABASE_SERVICE_ROLE_KEY || "").trim();
 const adminPassword = (process.env.ADMIN_DASHBOARD_PASSWORD || process.env.VITE_ADMIN_DASHBOARD_PASSWORD || process.env.NEXT_PUBLIC_ADMIN_DASHBOARD_PASSWORD || "").trim();
 const resendApiKey = (process.env.RESEND_API_KEY || "").trim();
-const formsToEmail = (process.env.FORMS_TO_EMAIL || "applyace0@gmail.com").trim();
+const formsToEmail = (process.env.FORMS_TO_EMAIL || "contactus@applyace.io").trim();
 const formsFromEmail = (process.env.FORMS_FROM_EMAIL || "ApplyAce Forms <onboarding@resend.dev>").trim();
 
 console.log("[Server] Environment check:", {
